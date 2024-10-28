@@ -1,0 +1,118 @@
+*  {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+}
+body  {
+
+    text-align: center;
+    margin: 10px;
+    color: white;
+    min-height: 200vh;
+   overflow-x: hidden;
+}
+.box {
+    border: 6px solid white;
+    background: black;
+    padding: 10px;
+    width: 100%;
+}
+ /* exo 1  faire disparaitre le p et quand on clique soit sur berne soit zurich ça ffiche la bonne réponse */
+
+ p {
+    visibility: hidden;
+    width: 240px;
+    margin: 10px auto;
+     transform: translateX(-200px);
+    transition: 0.6s ease;
+    opacity: 0;
+ }
+
+ .question-click {
+    background: black;
+    border-radius: 30px;
+    border: 6px dashed pink;
+   
+
+ }
+
+ /* 1)  je fais la classe que je veux ajouter  */
+ .show-response {
+    visibility: visible;
+    opacity: 1;
+    /* comme ça ça va de 0 a 1 */
+    transform: translateX(0);
+ }
+
+
+ /* *************  mouseEvents****************** */
+
+ /* 1)mouseEvent */
+/* étape1 :faire d'abord le style du bouton */
+ .mousemove {
+    height: 50px;
+    width: 50px;
+    border: 2px solid pink;
+    position: absolute;
+    /*  un element en absolute pour lui donner une position , tu fais left 50% et top 50% */
+    /*  et transform translate */
+    transform: translate(-50%,-50% );
+    border-radius: 50px;
+    transition: 0.3s ease;
+  
+    /*  en ease c chaud pcq l'evenemnt est récupérer a chaque micro mouvement de la souris et injecter c qqch qui prend pas mal d'énergie au naviagateur */
+ }
+
+ nav {
+   background: pink;
+   position: fixed;
+   /* pour la garder tout le temps en haut la naviagtion */
+   width: 100%;
+   height: 50px;
+   top: -50px;
+   transition: 0.3s ;
+ }
+ nav::after {
+   content: "";
+   height: 150px;
+   width: 150px;
+   background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.94), transparent);
+   /* doit tjrs être en absolute */
+   position: absolute;
+   transform: translate(-50% ,-50%);
+   /* ya un élement blanc qui est sorti mtn  */
+   z-index: 20;
+   /* pour être sur qu'il soit tout le temps devant tout le monde */
+   opacity: 0;
+   /*  je voudrais que ce blanc la quand je survole la navbar je le voisla c du pure css  docn nav::hover::after */
+ }
+ /* quand je survole ma nav j'aienvie que ma nav passe a une opacity de 1 */
+ nav:hover::after {
+   opacity: 1;
+   /* ça fonctionne mais pour fire suivre la souris faut lui injecter une left a   et top , ou est la souris enfait , et enfait le problème c'est qu'on peut pas les injecter en js ... ça met null (reg sur js tu vas voir  */
+   left: var(--x);
+   top: var(--y);
+   /* ces variables la non seuelemtn on peut les récuperer en js mais on peut aussi y injecter ce qu'on vet dedans , c'est SEtProperty */
+
+ }
+
+ ul {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   padding: 0;
+ }
+
+
+ form {
+   background: black;
+   height: 250px;
+   width: 100%;
+   padding: 100px;
+  
+ }
+ 
+
+ .hover:hover  {
+   background: red;
+ }

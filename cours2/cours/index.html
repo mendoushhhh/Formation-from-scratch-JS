@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--  clique de souris  -->
+<!-- box sert a donner a toutes les boites le meme style tu vois on va pas s'embeter a chaque fois a recommencer style pour une meme boite-->
+ <!-- click event c la classe pour designer la boite avec els elements clicks -->
+    <div class="click-event box">
+
+        <h4>quele st la capital de la Suisse ?</h4>
+        <button id="btn-1">Berne</button>
+        <button id="btn-2">Zurich</button>
+        <p>la bonne réponse est Berne</p>
+    </div>
+    <div class="mousemove">
+
+    </div>
+
+
+
+<div class="keypress box">
+    <h2>vous appuyez sur la touche : <span id="key"></span></h2>
+</div>
+
+
+<nav>
+ <ul>
+    <li>Accueil</li>
+    <li>Services</li>
+    <li>Contact</li>
+ </ul>
+</nav>
+
+
+<!-- c pour python , back ou jsp quoi il disait une fois qu'un formulaire est soumis il y a une action qui se fait et on envoie des données et il n'as pad besoin js de communiquer avec un bakc jsp qioi bref   -->
+
+di
+<form action="" class="form box">
+
+    <input type="text"  name="name" placeholder="Entrez votre nom" >
+
+
+    <select >
+        <option value="">Sélectionnez votre langage favoris</option>
+        <option value="Javscript">Javascript</option>
+        <option value="PHP">PHP</option>
+        <option value="Python">Python</option>
+    </select>
+    <input type="checkbox" id="cgv">
+    <label for="cgv">Accepter les CGV</label>
+    <input type="submit" value="valider" class="hover" >
+<!-- on se la reé injectera en js pour rataper ce qu'il y a dans le formulaire -->
+    <div></div>
+
+</form>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
