@@ -1,0 +1,41 @@
+body {
+  overflow: hidden;
+  /* genre tout ce qui dépasse tu l'enlève(en x et y ) même la marge du scroll part */
+  min-height: 100vh;
+  cursor: crosshair !important;
+  
+  
+}
+
+/* etape 3: on est entin de faire la forme de la première bulle  */
+.bubble {
+  position: absolute;
+  /* toutes nos bulles vont êtrre en position absoljute */
+  border-radius: 300px;
+  /* tu peux mettre raidus 3000 mais bon ça suffit déja */
+  background: rgba(249, 162, 0, 0.6);
+  /* etape7 : on va lui donner une direction et faire ne sorte qu'elle aille de haut en bas , ça on oourrait lui dire en css et elle va apsser d'une opacité a 0 a 1  et animation puis ensuite keyframes et on va lui dire a ta création la bubble quand on t'injecte la classe tu vas jusqu'a a un top de -250 pxl elle va monter au dessus des favoris etc et sa left faudra lui en ajouter une aléatoire ou elle est */
+  opacity: 0;
+  animation: anim 8s forwards;
+  /* précision : le forwards voir vidéo note */
+  cursor: crosshair;
+  
+}
+
+
+ @keyframes anim {
+  to {
+    top: -250px;
+    opacity: 1;
+    filter: hue-rotate(720deg);
+    /* voirexplication de hue rotate a la minute 17 */
+    /* etape8 : enfait la keyframe on peut pas lui injecter qqch, une variable  depuis js , donc on va devoir lui injecter  une variable left  un mouvement sur notre bulle un peu vers la droite un peu vers la gauche pas juste vers le haut tu vois effet plus sympa*/
+    left: var(--left);
+  }
+}
+h3 {
+  font-size: 10rem;
+  text-align: center;
+  margin-top: 20px;
+  color: rgba(128, 128, 128, 0.555);
+} 

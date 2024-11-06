@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    overflow-x: hidden;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+/* l'effet scrollbar quand je descne je veux que la barre enfai t apparaisse  */
+
+nav  {
+    background: pink;
+    height: 50px;
+    color: white;
+    position: fixed;
+  
+   width: 100%;
+   transition: 0.3s ease-out;
+}
+
+nav::after {
+    content: "";
+   
+    background: radial-gradient(circle closest-side, rgba(255, 255 , 255, 1), transparent);
+    position: absolute;
+    transform: translate(200%, -50%);
+    z-index: 500;
+    opacity: 0;
+    
+
+    
+}
+
+nav:hover::after {
+
+    opacity: 1;
+    left: var(--x);
+    top: var(--y);
+}
+
+
+
+
+ul {
+    
+    display: flex;
+    justify-content: center;align-items: center;
+   
+}
+li {
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/* réponse sur la div etc  */
+
+.questioncontainer {
+    height: 200px;
+    width: 100%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h3 {
+    color: whitesmoke;
+}
+.solutions {
+    margin-top: 10px;
+}
+button {
+    padding: 10px;
+}
+p {
+    color: white;
+   opacity: 0;
+   margin:10px;
+   transform: translate(-200px);
+   transition: 0.6s ease;
+}
+
+
+
+.show-response {
+
+    opacity: 1;
+    transform: translateX(0);
+    background: green;
+}
+
+
+
+.touch {
+
+color: white;
+    height: 200px;
+    background: red;
+}
+
+form {
+    background: black;
+    height: 200px;
+    color: white;
+    padding: 50px;
+    position: relative;
+  
+  
+}
+ form > div {
+   
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50% , 50%);
+ }
+
+
+
+.mouse {
+   
+    height: 50px;
+    width: 50px;
+    border: 2px solid pink;
+    border-radius: 50px; 
+    position: absolute;
+    /* j'pense pas que ça ce soit si imoortant dans la correction *******   correction */
+    transition: 0.3s ease;
+    transform: translate(-50%, -50%);
+    /* Cela permettra à la souris de passer à travers l'élément .mouse sans interférer avec les clics sur les autres éléments de la page. */
+    pointer-events: none;
+
+}
+
+
+
+
+.boite {
+    background: rgb(167, 53, 53);
+    height: 200px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.ground {
+    height: 100px;
+    background: rgb(5, 70, 14);
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.box {
+    background: red;
+    color: white;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.clickEvent {
+    color: white;
+}
+
+
+
