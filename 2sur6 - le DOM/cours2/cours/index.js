@@ -83,10 +83,10 @@ buttonRevelation.addEventListener("click", () => {
 });
 
 // sans rajouter une class depuis le css
-phrase.addEventListener("click", () => {
-  paragraphe.style.visibility = "visible";
-  paragraphe.style.opacity = "1";
-});
+// phrase.addEventListener("click", () => {
+//   paragraphe.style.visibility = "visible";
+//   paragraphe.style.opacity = "1";
+// });
 
 // revoir entre 1:00 et 1:01
 
@@ -124,24 +124,24 @@ window.addEventListener("mousemove", (e) => {
 
 // révision 29/10/24:-------------------------------
 
-// const mouseMove = document.querySelector(".mousemove");
+const mouseMove = document.querySelector(".mousemove");
 
-// window.addEventListener("mousemove", (e) => {
-//   mouseMove.style.left = e.pageX + "px";
-//   mouseMove.style.top = e.pageY + "px";
-// });
+window.addEventListener("mousemove", (e) => {
+  mouseMove.style.left = e.pageX + "px";
+  mouseMove.style.top = e.pageY + "px";
+});
 
-// // mouse up c'est l'evenement qui se déclenche lorsqu je clique trelache le bouton de ma souris la ya des evnemeents quis e créer l'inejction du style la
-// window.addEventListener("mouseup", () => {
-//   mouseMove.style.transform = "scale(2) translate(-50%, -50%)";
-//   // enait le scale agradit ou rétrécit un élement
-//   mouseMove.style.border = "2px solid teal";
-// });
+// mouse up c'est l'evenement qui se déclenche lorsqu je clique trelache le bouton de ma souris la ya des evnemeents quis e créer l'inejction du style la
+window.addEventListener("mouseup", () => {
+  mouseMove.style.transform = "scale(2) translate(-50%, -50%)";
+  // enait le scale agradit ou rétrécit un élement
+  mouseMove.style.border = "2px solid teal";
+});
 
-// // c'est quand tu enfonce ta souris un evenement se déclenche alors
-// window.addEventListener("mousedown", () => {
-//   mouseMove.style.transform = "scale(5) translate(-50%, -50%)";
-// });
+// c'est quand tu enfonce ta souris un evenement se déclenche alors
+window.addEventListener("mousedown", () => {
+  mouseMove.style.transform = "scale(5) translate(-50%, -50%)";
+});
 
 // L’événement mousedown se déclenche lorsqu’un bouton de la souris est enfoncé. Cela signifie qu'au moment où l’utilisateur commence à appuyer sur le bouton de la souris (gauche, milieu ou droit), le code associé à cet événement est exécuté.
 
@@ -175,13 +175,13 @@ const clickEvent = document.querySelector(".click-event");
 const Response = document.querySelector("p");
 
 clickEvent.addEventListener("mouseenter", () => {
-  clickEvent.style.background = "rgba(0,0,0,0.6";
+  clickEvent.style.background = "rgba(0,0,0,0.6)";
 });
 
 // mouseout(quand la souris quitte , sort de cette zone)
 
 clickEvent.addEventListener("mouseout", () => {
-  clickEvent.style.background = "pink";
+  clickEvent.style.background = "rgba(255, 0, 0, 1)";
 });
 
 Response.addEventListener("mouseover", () => {
@@ -309,22 +309,30 @@ const ring = () => {
 // Révision 29/10/24------------------------
 
 
+// const navbar = document.querySelector('nav');
+
+// window.addEventListener("scroll", () => {
+//   console.log(window.scrollY);
+
+//   if (scrollY > 120) {
+//     navbar.style.top = 0;
+//   } else {
+//     navbar.style.top = "-50px";
+//   }
+
+// });
+
+
 const navbar = document.querySelector('nav');
+ window.addEventListener("scroll", () => {
 
-window.addEventListener("scroll", () => {
-  console.log(window.scrollY);
-
-  if (scrollY > 120) {
+  if(scrollY > 120) {
     navbar.style.top = 0;
-  } else {
+  }else {
     navbar.style.top = "-50px";
   }
 
-});
-
-
-
-
+ })
 
 
 // --------Evenements sur les formulaires----

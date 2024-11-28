@@ -1,0 +1,91 @@
+
+.click-event {
+    background: grey;
+    padding: 100px;
+   text-align: center;
+}
+
+.click-Venent {
+    background-color: blue !important;
+    border: 2px solid teal;
+}
+
+
+p {
+    transform: translateX(-50%);  /* Position initiale */
+    color: whitesmoke;
+    opacity: 0;  /* L'élément est invisible au départ */
+    visibility: hidden;  /* L'élément est caché */
+    transition: opacity 0.5s ease;  /* Animation de l'opacité */
+}
+
+.show-response {
+    visibility: visible;  /* L'élément devient visible instantanément */
+    transform: translateX(500px);  /* Déplacement de l'élément */
+    background: green;
+    width: 200px;
+    opacity: 1;  /* L'élément devient visible avec une opacité de 1 */
+    transition:  0.3s ease;  /* Animation pour la translation et l'opacité */
+}
+
+
+
+.show-wrong {
+    visibility: visible;  /* L'élément devient visible instantanément */
+    transform: translateX(500px);  /* Déplacement de l'élément */
+    background: red;
+    width: 200px;
+    opacity: 1;  /* L'élément devient visible avec une opacité de 1 */
+    transition: transform 0.5s ease, opacity 0.5s ease;  /* Animation pour la translation et l'opacité */
+
+}
+
+
+
+
+
+nav {
+    top: -70px;  /* Fixe la navbar en haut de la page */
+    position: fixed;  /* Change la position en fixed pour qu'elle reste visible lors du défilement */
+    width: 100%;  /* Prend toute la largeur de la page */
+    overflow-x: hidden;  /* Empêche le défilement horizontal */
+    z-index: 1000;  /* Assure-toi que la navbar reste au-dessus des autres éléments */
+    background-color: pink;  /* Optionnel : ajout d'une couleur de fond */
+    transition: top 0.3s ease-in-out;  /* 0.3s pour une transition douce */
+ 
+}
+
+ul {
+    display: flex;  /* Aligne les éléments horizontalement */
+    align-items: center;  /* Centre verticalement les éléments */
+    justify-content: space-around;  /* Espacement égal entre les éléments */
+    list-style: none;  /* Enlève les puces des éléments de la liste */
+    padding: 0;  /* Enlève les marges et le padding par défaut */
+    margin: 0;  /* Enlève les marges */
+    height: 70px;  /* Définit la hauteur de la barre de navigation */
+}
+
+li {
+    cursor: pointer;  /* Change le curseur pour indiquer que l'élément est cliquable */
+    padding: 0 15px;  /* Espacement horizontal pour les éléments de la liste */
+}
+
+
+
+.mousemove {
+    height: 50px;
+    width: 50px;
+    border:  2px solid pink;
+    position: absolute;
+    border-radius: 50px;
+   transform: translate(-50%, -50%);
+   z-index: -1;
+   pointer-events: none;
+   transition: 0.3s ease;
+   
+}
+
+
+
+
+

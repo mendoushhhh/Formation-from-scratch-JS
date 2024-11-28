@@ -1,16 +1,15 @@
 // ********************LEs variables****************************
-
-let variable = "Hello";
-
+let variable = 'Hello';
 console.log(variable);
 
 var unTexte = "voici un texte bg";
 
 // constante = const , c'est une donné qu'on ne peut pas bouger , il ne pas obtenir une autre valeur par la suite
 
-// const Name = "julie";
-// console.log(Name);
-// const Name = "mirabelle";
+var Name = "julie";
+ Name = "mirabelle";
+console.log(Name);
+
 
 
 // Name = "charles";
@@ -79,7 +78,7 @@ console.log(arbre);
 
 
 
-// les opérateurs
+// les opérateurs/ou littéraux
 
 console.log(4 + 5);
 console.log(4 - 5);
@@ -106,13 +105,13 @@ console.log(total);
 
 let x = 3;
 
-let y = "3";
+let y = 3;
 // une fois que t'as dis le if quoi qu'il arrive ilf aut mettre des parenthèses
-// if (x > y) {
-//   alert("tg");
-// } else {
-//   alert("Y plus grand que x enfait");
-// }
+if (x > y) {
+  alert("tg");
+} else {
+  alert("Y plus grand que x enfait");
+}
 
 
 
@@ -122,7 +121,7 @@ let y = "3";
 
 // pour tesetr si une variable
 if (x) {
-  console.log("x existe");
+  console.log("p existe");
 }
 
 
@@ -160,12 +159,19 @@ if (x < y || x > 1) {
 function faireQuelqueChose() {
   console.log("je fais un truc");
   alert("calcul terminé");
+  return;
   console.log(5 + 6);
 }
 // la on voit la fonction a une algorithle de choses a faire , un algorithme , une focntion c'est un peu comme une recette de cuisine on met tout puis ça se déclenche , on automatise quelque chose
 
 // attention il faut imperativemnt appelelr la fonction pour qu'elle se joue !
 faireQuelqueChose();
+
+
+
+
+
+
 
 // fonction fléché
 const addition = (a, b) => {
@@ -180,11 +186,25 @@ addition(1254852, 54858595);
 
 // la portée des variables
 // return ca permet de reoturner els choses ou de mettre fin a une fonction
+
+
+  
 function add2() {
-  let num = 4;
-  consol.log(num + 2);
+let num = 4;
+  console.log(num + 2);
   // voir sur icloud j'ai filmé
 }
+
+
+
+add2();
 // console.log(num);   tu vois que en faisant consol log npour voir le contenu de num bah ils disent qu'ile st pas défini pq ? pcq elle a été déclarer dans la function et donc elle ne fonctionne que la par contre si tu déplace let num en dehors alors la ça va fonctionner
 
 // attention tout ce docuement compte il lit tout ça avant d'executer ces dernière focntions
+ if (y) {
+  console.log("y existe ");
+  
+ } else {
+  console.log("y existe pas");
+  
+ }
