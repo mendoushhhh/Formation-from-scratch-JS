@@ -138,12 +138,6 @@ if(cgv.checked) {
 
 
 
-
-
-
-
-
-
 // const boite = document.querySelector(".boite");
 
 // setInterval(() => {}, 3000); // 3000 millisecondes = 3 secondes

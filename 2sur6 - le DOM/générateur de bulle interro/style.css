@@ -3,26 +3,39 @@ body {
   min-height: 100vh;
   cursor: crosshair;
 }
+
+
+/* étape 4 : on lui rajoute du style */
 .bubble {
   position: absolute;
   border-radius: 300px;
   background: rgba(255, 166, 0, 0.6);
-  opacity: 0;
-  animation: anim 8s forwards;
-  filter: hue-rotate(0deg);
+
+
+
+
+  /* étape6 : faire avancer les bulles  */
+    opacity: 0;
+  animation: anim 9s forwards;
 }
 
 @keyframes anim {
   to {
-    top: -350px;
-    left: var(--left);
+    top: -350px ;
     opacity: 1;
     filter: hue-rotate(720deg);
+   left: var(--left);
+   /*  c'est des variable en css */
+
   }
 }
+
 h3 {
   font-size: 10rem;
   text-align: center;
   margin-top: 20px;
   color: rgba(128, 128, 128, 0.555);
 }
+
+
+

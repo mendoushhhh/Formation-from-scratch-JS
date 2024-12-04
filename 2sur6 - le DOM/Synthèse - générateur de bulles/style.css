@@ -38,6 +38,7 @@ animation: anim 7s forwards;
 
   }
   /* to : Définit l’état final de l’animation. Les propriétés dans ce bloc seront appliquées progressivement de l’état initial à l’état final pendant les 8 secondes. */
+  
 }
 
 

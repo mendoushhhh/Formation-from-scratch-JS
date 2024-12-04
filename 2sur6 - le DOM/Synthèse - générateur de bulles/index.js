@@ -28,9 +28,16 @@
 // const bubbleMaker = () => {
 
 //     //  étape 1 on se créer d'abord une bulle toute seul puis ensuite on essaiera de les faire venir en nombre
+
+
+
 //     const bubble = document.createElement('span');
 //     // on peut injecter des balises avec innerhtml bah en réalité avec createlement aussi  !
 //     // etape4) on voudrais ajouter mtn cette classe , remove c pour enlever, toggle pour la mettre si elle y est pas et le span a mtn une lasse bubble et la on voit qu'on a rajouter une class a span
+
+
+
+
 //     bubble.classList.add("bubble")
 
 //     // etape5: on va randomiser la taille des bulles pcq tu vois la au début sur le fichier html tu vois 0*0 et on veut produire un chiffre alatoire entre 100 et 300  a chaque foi que je réactuzalise a page le chiffre change
@@ -161,6 +168,9 @@ const bubbleMaker = () => {
 setInterval(bubbleMaker, 2000);
 
 // mtn c'est bon c'estr fait  je voudrais donc remove a chaque fois que je clique dessus
+// et le setproperty enfait ça seert a intégrer du cotnenu dans une variable css 
+// Les keyframes contrôlent le mouvement global (par exemple : flotter).
+// setProperty en JavaScript personnalise chaque bulle (par exemple : où elle commence, sa taille, sa couleur).  donc ici pour ça on dit bubble.style.setproperty et pas keyfram.style.setpropery
 
 
  
