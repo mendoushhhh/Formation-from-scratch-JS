@@ -8,7 +8,7 @@
   padding: 5px;
   font-family: "font-1", Arial;
   box-sizing: border-box;
-  cursor: none;
+
 }
 li {
   list-style: none;
@@ -18,6 +18,9 @@ a:visited {
   color: white;
   text-decoration: none;
   transition: 0.3s;
+  position: relative;
+  z-index: 1000;
+  /* vu que les 3 autres élements sont en absolute la ici ils sont en relative il faut dire  */
 }
 a:hover {
   font-size: 1.3rem;
@@ -37,7 +40,7 @@ nav {
 nav ul {
   display: flex;
   justify-content: space-between;
-  z-index: 500;
+ 
 }
 section {
   display: flex;
@@ -166,48 +169,53 @@ footer img {
 
 /* rond 1 : le rond qui remplace la souris  */
 
-.mouse {
 
-  height: 10px;
-  width: 10px;
-  border-radius: 50px;
+
+
+
+.cercle {
   position: absolute;
+  border-radius: 1500px; 
   transform: translate(-50%, -50%);
-  background: rgba(149, 26, 26, 0.632);
-  z-index: 3;
+  mix-blend-mode: difference; /* Mode de mélange utilisé */
+  cursor: none;
+
+}
+
+#mouse {
+
+  height: 14px;
+  width: 14px;
+  /* il préfère mettre un truc a fond genre 1500px pour être sur que ça arrondis  */
+  background:#2128bd;
+  z-index: 3;  
+ 
  
 
 }
 
 /* rond deux le rond "moyen" */
-.medium-circle {
-  height: 80px;
-  width: 80px;
-  border-radius: 50px;
-  position: absolute;
-  background: rgba(193, 180, 180, 0.797);
-  transition: 0.1s ease;
-  transform: translate(-50%, -50%);
+#mediumCircle {
+  height: 100px;
+  width: 100px;
+  background: white;
+  transition: 0.15s ease-out;
   z-index: 2;
   color: black;
-  mix-blend-mode: difference; /* Mode de mélange utilisé */
 
 
 }
 
 /* rond le plus grand qui englobe les deux autres */
 
-.big-circle {
+#bigCircle {
 
-  height: 150px;
-  width: 150px;
-  background: rgba(0, 0, 0, 0.418);
-  border-radius: 100px;
-  position: absolute;
-  transition: 0.3s ease;
-  transform: translate(-50%, -50%);
+  height: 200px;
+  width: 200px;
+  background:rgb(41, 41, 41);
+  transition: 0.25s ease-out;
   z-index: 1;
-  mix-blend-mode:color-burn;
+
  
   
 }

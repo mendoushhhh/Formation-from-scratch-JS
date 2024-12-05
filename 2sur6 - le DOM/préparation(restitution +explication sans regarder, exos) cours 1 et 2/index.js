@@ -62,20 +62,20 @@ window.addEventListener("scroll", (e) => {
 
 // 5/5
 
-// const formulaire = document.querySelector("form");
-// const nom = document.querySelector('input[type="text"]');
-// const langages = document.querySelector("select");
-// const textContent = document.querySelector("form > div");
+const formulaire = document.querySelector("form");
+const nom = document.querySelector('input[type="text"]');
+const langages = document.querySelector("select");
+const textContent = document.querySelector("form > div");
 
-// formulaire.addEventListener("click", (e) => {
-//   if (cgv.checked) {
-//     textContent.innerhtml = `
-//             <h3>Nom: ${nom} </h3>
-//             <h4> Langage favoris : ${langages} </h4>          `;
-//   } else {
-//     alert("veuillez accepter les conditions générales de vente");
-//   }
-// });
+formulaire.addEventListener("click", (e) => {
+  if (cgv.checked) {
+    textContent.innerhtml = `
+            <h3>Nom: ${nom} </h3>
+            <h4> Langage favoris : ${langages} </h4>          `;
+  } else {
+    alert("veuillez accepter les conditions générales de vente");
+  }
+});
 
 // 1/5
 
