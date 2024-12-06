@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #383838;
+}
+.content {
+  color: #09fbba;
+  transition: 1s;
+}
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 20px;
+}
+p {
+  padding: 30px 50px;
+}
+#side-bar {
+  position: absolute;
+  width: 230px;
+  height: 100%;
+  background: #09fbba;
+  top: 0;
+  left: -230px;
+  transition: 0.5s ease-out;
+  z-index: 4;
+}
+/* création de la class */
+
+#side-bar.toggle-button {
+  left: 0px ;
+  /* // Rappel Priorités en CSS : !important > id > classe > baliseHtml */
+  /* comme ça genre juste .toggle-button { ça fonctionne pas mais si tu met le selecteur juste avant avec le id la oui :) */
+
+}
+.toggle-button ~ .content {
+  opacity: 0.3;
+  /* ~ ça c'est genre le pote de side-bar pcq on voit que dans le body ya deux enfants ya sideber et content donc  ~ ça sert a ça */
+}
+.toggle-button span {
+  position: absolute;
+}
+/* ils ont pas d'id ils ont pas d'id et n'ont pas de class ces span mais ona  qd même des méthdoes en js pour sélectionner des choses */
+.toggle-button span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.toggle-button span:nth-child(2) {
+  opacity: 0;
+  
+}
+.toggle-button span:nth-child(3) {
+  transform: rotate(-45deg);
+  
+}
+
+
+
+.toggle-btn {
+  position: absolute;
+  top: 30px;
+  left: 240px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
+
+.toggle-btn span {
+  width: 60px;
+  height: 10px;
+  border-radius: 5px;
+  background: #09fbba;
+  display: block;
+  margin-top: 4px;
+  transition: 0.3s ease;
+}
+li {
+  color: #292929;
+  list-style: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding-left: 5px;
+}
+li:hover {
+  background: #292929;
+  color: #fcfcfb;
+}
+
+
