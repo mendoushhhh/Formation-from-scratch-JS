@@ -190,3 +190,88 @@ document.body.addEventListener("click", (e) => {
 
 
 // *************Cas pratique 1)  pas mal de choses interessantes dans la manipulation de données 
+
+
+
+// c'est a 3:10 cela t'as chabouler quelques enroules enfait mais à l'aise c 'est rien 
+// les Datasets*************************************
+// il faut savoir que c qqch qu'il a faillit présenter dans la aprtie sur la manipulation du Dom mais faut savoir que la frontière entre la manipulation du DOM et de données est assez fine hein donc ya des élements que je vous donne que j'aurais très bien pu donner dans la manipualtion du dom et inversément
+
+
+// ce sont des donnéesquo'n peut mettre dans des balises , balise c en quelque sorte des objets
+
+const h3js = document.getElementById("javascript");
+console.log(h3js.id);
+// :on va voir que c'est une balise  et elle a un id  , on peut dire h3js.id on obtient que javascript h3js.class on obtient que sa classe
+// on pourrait avoir besoin de mettre des données , de la dara dans ce balises si on veut pas utiliser l'id admettons qu cette id on l'utilise pour autre chose alors on fait dataset, tu vas sur html et tu rajoutes data-qqch (normalement c'étias dans l'autre fichier j'ai copier coller l'hrml bref tu te débrouilleras )
+
+
+// donc la mtn on fait 
+// console.log(h3js.dataset);
+// tu demandes de t'affiher tous les dataset que possède cette balise(voir3:14)
+console.log(h3js.dataset.lang);
+//  one st rentré dans objet pq objet ?pcq accolade , pcq on a un index : qqch , tableau ya jaamis ça !!!
+
+// mtn tiens on va se selectionner tous nos h3 
+
+const h3 = document.querySelectorAll("h3");
+
+// pour chacun d'eux j'aimerais que tu me fasses un consol.log
+
+// h3.forEach((language) => console.log(language.dataset.lang)
+// );
+
+
+// les Regex***************************************
+// Ce sont des expressions régulières ça nous permet de tester des choses tester des chaines de caractères et voir si elels correspondent par exemple typiquement un email on sait qu'ul doit pas contenir de caractères spéciaux a apart els tirets de lq touch 6 et touch8, il peut contenir des chiffres oui, un arobase , ilf aut qu'il ait un nom de domaine et puis derière un point com .fr fin faut pas qu'il ait un charabia comme ça super long derrière
+// elle est pas méga utlisé la méthode search pour ça que je vous la dit rapidement  
+
+let mail = "from_sratch33@gmail.com";
+console.log(mail.search(/from/));
+//  elle est pas megautilisé la méthode search pour ça il la dit rapidement
+// console.log(mail.search(/from/, "de"));
+// on teste si l'expression régulière elle match avec la chaine de caractère qu'on a passer ici 
+// console.log(mail);
+
+// console.log(mail.match(/[zug]));
+// console.log(mail.match(/[12]/));
+
+
+// parfois quand tu demande a un utilisagteur de mettee au moins un caractère spécial au moins une majuscule dans leur mot de apsse he bien justement  avec une regex qu'on peut controler cela qu'on peut controler que tout correspond donc en faisant comme ça je cherche si les lettres zug (z u ou g figurent dans le mail let mail e, haut)
+
+// si on voulait tous les chifffres on ferait 
+// la enfait on check si ya un chiffre et oui ya un 3 ça marche
+console.log(mail.match(/\d/));
+// je veux que tu matches toutes les elttres , dès qu'il y a une lettre c bon ça marche 
+
+console.log(mail.match(/[a-z]/));
+// null ça rtourne false et ces trucs la qu'on voit ça return true
+
+
+
+// il a une feuillecheat cheatography regular expression ou il voit tous ça
+
+// comment contrôler un mail, <w tus les caractères chiffres ou lettre (word ça comprend aussi les chiffres)
+
+// console.log(mail.match(/[\w_-]+@[\w-]/));
+// 3:25revoir ici c chiant haha-3:29 
+// interessant de savoir comprendre les regex après t'es pas obliger des les mémoriser tu viis tant que ça marche même si tu comrpend pas vrmt hahaha en gros c ça qu'il entrain de nous dire 3:28revois :)))
+
+
+let separator = 265264849;
+// 3:30 enfait lui même il trouve des codes etc haha  et il dit que clele qu'on fait les gens sont plus fiable en générale croyez moi 3:30
+
+
+
+
+// form checker 
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1)on se fait la  structure de ce formulaire ,f aut savoir que notre formulaire c une div form qui vaenglober tout et aussi comrpendre que chacun de ces élements ya quand même bcp de chose a l'interieur ya un label un input et le message d'erreur et dans la partie message  ya une progressebar donc  -->
+
+    <form action="">
+        <div class="pseudo-container">
+            <label for="pseudo">pseudo</label>
+            <input type="text" autocomplete="off" id="pseudo">
+            <span></span>
+        </div>
+        <div class="email-container">
+            <label for="email">Email</label>
+            <input type="text" autocomplete="off" id="email">
+            <span>Email incorrect</span>
+        </div>
+        <div class="password-container">
+            <label for="password">Mot de passe</label>
+            <input type="password" autocomplete="off" id="password">
+            <p id="progress-bar"></p>
+            <span class=""></span>
+
+        </div>
+        <div class="confirm-container">
+            <label for="confirm">Confirmer mot de passe</label>
+            <input type="password" autocomplete="off" id="confirm">
+            <span></span>
+        </div>
+        <!-- les deux dernières div sont des types password pq? car quand on ecris dans le input ça fait des petits points -->
+         <!-- comment on soumet un formulaire ? ave cun input de type submit -->
+          <input type="submit" value="valider">
+
+    </form>
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>

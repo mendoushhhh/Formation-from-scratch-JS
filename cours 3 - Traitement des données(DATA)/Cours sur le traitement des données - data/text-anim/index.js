@@ -272,11 +272,53 @@ console.log(dateParser(iso));
 
 
 // Destructuring ************************************
-
-
+// ça permet enfait d'isoler les données !! puis après tu peux même les organiser(mettre dans l'ordre) 
+// destructurer enfait , on va surement voir cela dans du code , ça veut juste dire  je vais créer une variable qui s'appelle destVar genre : const destVar = moreData.destVar; et elle sera équivalente a moreData.destVar et donc pour éviter d'écrire tout cela bah on se le met entre accolade et on a pas besoin ensuite de le mettre a coté reg 
+// const {destVar} = moreData
 
 
 // 3:00
 Let moreData = {
     destVar: ["Element 1", "Element 2"],
 }
+const { destVar} = moreData;
+
+let array5 = {70, 80, 90};
+console.log(array5[0]);
+console.log(array5[1]);
+console.log(array5[2]);
+// 70,80,90
+
+// mtn regarde on peut déstructurer par exemple
+
+let array5 = {70, 80, 90};
+let {x, y, z} = array5;
+// console.log(x, y, z);
+// ou on peut les mettre comme ça séparement hein reagarde 
+console.log(x);
+console.log(y);
+console.log(z);
+
+
+// mtn on pourrait utiliser ne pas utiliser la méthode d'avant la tolocaledestring 3:04-3:10 pour faire clea pour un truc du code qu'on a déja fait 
+
+console.log(iso);
+const dateDestructuring = (chaine) => {
+ let newDate = chaine.split('T') [0];
+//  console.log(newDate);
+//  avec split la je dis partout ou tu as un tiret tu casses le truc
+ newDate.split("-")
+  
+};
+// console.log(dateDestructuring(iso));
+
+
+
+
+
+
+
+
+ 
+
+
