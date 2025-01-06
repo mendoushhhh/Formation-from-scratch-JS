@@ -6,9 +6,27 @@ let boolean = true;
 let maVariable; //type undefined
 // revoir cela il aavit dit qqch d'interressant  avec undefined et null sjais plus
 
+
+// Révision 10-12------------------------------------
+//  en gros il disait que tu demandes quelque chose qui n'a pas été définit tout simplement on a rien attribuer a maVariable tu vois
+// typeof ça sert a voir le type de  variable, exemple : 
+
+console.log(typeof string);
+console.log(typeof number);
+console.log(typeof boolean);
+console.log(typeof maVariable);
+
+
+
+
+
+
 // Tableaux ****************************************************
 
 let array = ["Bordeaux", "Toulouse", "Nantes"];
+console.log(array);
+// : la length c'est le nombre d'élement qu'il y a dans le tableau
+
 // un tableau de 3 élement
 
 // console.log(array);
@@ -19,18 +37,51 @@ let array = ["Bordeaux", "Toulouse", "Nantes"];
 // console.log(array[2]);
 // console.log(array[1]); c toulouse , si tu met 0  c bordeaux
 
+
 // a retenir: dans un objet on met des accolades et dans un tableau on met des crochets
 
 // et si je veux afficher la lettre du pays gernre
 
 // console.log(array[0] [3]); tu as donc ici la lettre d de Bordeaux
 
+
+// révision 10-12(sans regarder)--------------------
+
+let parray = [ "Bruxelles", "Liège", "Bastogne","Limbourg", "Charleroi","Evere","Schaerbeek"];
+console.log(parray);
+
+console.log(parray[0] [0]);
+
+
+// pour info array signifie tableau en anglais
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // conseil très important : c'est pas obligatoire de tout retenir , ce quie st important c'est de savoir ou retrouvz les informations c'est une organsiation qu'ond éveloppe a force de développer des choses mais ne cherchezz pas a retenir ça erait bête et par exemple cela ici les tablaux etc c'esst quelque chose que vous alle retenir naturellement connaitre a force de les faire
 
-let array2 = ["Bordeaux", 24, true, [1, 2], { nom: "Denis" }];
+let array2 = ["Bordeaux", [24,11,18,22,24,22,203,66,6587], true, [1, 2], { nom: "Denis" }];
 // enfait les objets ont pas jsute des accolades mais aussi un index  ici c'est nom , a chque partie de l'objet il y a un index ,c'est comment on va appelelr cette espace de stockage
 
-// console.log(array2[3] [1]); revoir la vidéo mtn : pas compris a 18min
+console.log(array2[1] [5]);
+
+
+// console.log(array2[3] [1]); 
+
+
+
+
+// Les objets*******************************************
 
 let objet = {
   pseudo: "Denis",
@@ -38,10 +89,93 @@ let objet = {
   technos: ["Javascript", "React", "NodeJs"],
   admin: false,
 };
+
+console.log(objet);
+
 // ici tu vosi tjrs index et valeur , index valeur  et c classé par odre alphabetique dans le console.log
 
 // console.log(objet);
 // je voudrais afficher l'age de mon utilisateur
+
+
+
+
+
+
+
+// révision 10-12---------------------------------------
+
+console.log(objet.technos [2] [2]);
+objet.adresse = "25 rue des loisirs";
+
+console.log(objet);
+// u vois que t'as ajouter la rue 
+
+
+// autre exemple
+
+let pulsarMateriaux = {
+  pseudo:"antoine",
+  age: 44,
+  loisirs:["foot", "lutte", "jogging", "natation","hockey"],
+  adresse: "rue des vantouses n°23"
+}
+console.log(pulsarMateriaux);
+
+console.log(pulsarMateriaux.loisirs [2] [6]);
+
+// je veux écraser et remplacer un contenu de l'objet exemple adresse différente
+
+pulsarMateriaux.adresse = "rue des  4 lignes 36";
+console.log(pulsarMateriaux);
+// pas oublier de mettre a jour l'objet !!!
+
+
+let purpose = [
+  {
+    pseudo: "marie",
+    age:55,
+    technos:["js", "php", "python"],
+    admin: false,
+  },
+  {
+    pseudo:"arnaud",
+    age:35,
+    technos: ["html", "css", "angular"],
+    admin:false,
+    },
+
+    {
+      pseudo:"pascal",
+      age:33,
+      technos:["java","python","javascript"],
+      admin:true,
+    }
+
+
+
+
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log(objet.technos[1] [2]);
+
+
 
 // console.log(objet.age);
 
@@ -55,7 +189,7 @@ let objet = {
 // mais si t'avais dis objet.age ala place d'adresse bah age aurait ecraser cela parla valeur précédente
 //  en js on peit changer un boolean en number puis le rechanger etc, y inclkure des tabkeaux dans de tabeaux etc a l'infini  , js c'est ça que les gens repproches c'est qu'il est bcp trop permissif
 
-// on va se faire une base d'utilisateur  ***************
+// on va se faire une base de données d'utilisateur*******************************************
 
 // on va faire encore deux autre objet mais dans un tableau
 let data = [
@@ -79,21 +213,55 @@ let data = [
     admin: true,
   },
 ];
+
+
+
+
+
+
 // on va tjrs trouver , c souvent qu'on va trouver des données en js quasimenttt le temps
 
 // ici devant nous on appelle cela donc une base de donnée , et on part d'un taleau , un tebleau avec 3 objets a l'inteieur
 // on peut se balader avec un point mtn vu qu'on est dans un objet
-console.log(data[2].pseudo[0]);
+console.log(data[2].technos[0][1]);
+
+
+
+
+
+
+
+
 
 // ******************** Les structures de contrôle***********************
 
 // ce sont des moyens de contrôler les choses enfait , elles sont paq toutes forcément utile donc on passera vite dessus
 
 if (data[0].age > data[1].age) {
-  // console.log(data[0].pseudo + "est plus âgé que " + data[1].pseudo);
+  console.log(data[0].pseudo + "  est plus âgé que " + data[1].pseudo);
 } else {
   // valeur si faux
 }
+
+
+
+
+// révision******************************************
+
+if(data[1].age < data[2].age) {
+  console.log(data[1].pseudo + " est plus jeune que " + data[2].pseudo);
+  
+}else {
+  alert("nulll");
+}
+
+
+
+
+
+
+
+
 
 // en terme de syntaxte tu peux écrire aussi , les accolades en js ça veut dire j'ai plusieurs lignes a mettre tu vois si t'en a qu'une seul t pas obliger de mettre les accolades
 // exemple
@@ -113,31 +281,65 @@ let w = 0;
 
 while (w < 10) {
   w++;
-  // console.log("la valeur de w est de : " + w );
+  console.log(w);
 }
 
 // regarde dans la console tu vas voir et comprendre , on l'utilise pas si souvent que ça pcq pour le prof la boucle for est bcp plus forte que le while
 
 // do while , ça se réprésente comment :
 
-// let d = 0;
+let d = 0;
 
-// do {
-//     d++;
-//     // console.log(d);
+do {
+    d++;
+    console.log(d);
 
-// }while(d < 5 )
+}while(d < 5 )
 
 // genre tu me fais ça tant que d n'est pas égale a 5
 
 //  les boucle for(les 2types )*****************************************
+// la boucle for est bcp plus forte que while !!! pour ça il s'en sert pas bcp le while
+
 
 //  quelque chose de bcp bcp bcp plus utile c'est les boucle for et il a souvent vu cela dans du code
 //  c lui il a mis une variable et inventé le nom const , ça veut dire que dans data la chaque élement individuellement je vais 'lappeller user et lui il va faire  tourner le tableau et à chaque tours on pourrait lui donner une logique
-for (const user of data) {
-  document.body.innerHTML += `<li>${user.pseudo} - ${user.age} ans</li>`;
-  // voir 33min
+// 1) on met le nom d'une variable, user ou autre , pour retrouver 
+// 2) of data: genre dans data dans ma base de donnée chaque élement individuellement je vais 'lappeller user, ligne 195
+// 3) donc on va faire tourner le tableau de notre utiliitauer et a chaque tour in lui donne une logique 
+// for (const user of data) {
+//   document.body.innerHTML += `<li>${user.pseudo} - ${user.age} ans</li>`;
+
+//   // ici on va faire une logique d'fichae au lieud 'afficher tjrs dans la console on va ajouter dans le body
+//   // voir 33min
+// }
+
+
+
+// Révision-----------------------------------------
+
+for (const poire of data) {
+
+document.body.innerHTML += `<li>${poire.age} ans - ${poire.pseudo}  </li>`;
+document.body.innerHTML += `<h4>Technos maitrisés:  ${poire.technos}</h4>`;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // cette boucle est pas mal utilisé hein mais moi j'utilise ça le plus :
 // ça veut dire i tu pars de 0
 for (i = 0; i < data.length; i++) {
@@ -156,36 +358,114 @@ for (i = 0; i < data.length; i++) {
 
 // étape1) je voudrais  rajouter une evenmeent sur le body au click
 
-document.body.addEventListener("click", (e) => {
-  // savoir sur quoi j'ai cliqué
-  // console.log(e.target);
-  // la balsie c un objet donc tu peux faire .id :
-  console.log(e.target.id);
-  // mtn je voudraiq genre quand je cliquesur js le fond devient jaune , quand je clique la le fond devant comme ça etc etc
+// document.body.addEventListener("click", (e) => {
+//   // savoir sur quoi j'ai cliqué
+//   console.log(e.target);
+//   // la balsie c un objet donc tu peux faire .id :
+//   console.log(e.target.id);
+//   // // mtn je voudraiq genre quand je cliquesur js le fond devient jaune , quand je clique la le fond devant comme ça etc etc
 
-  if (e.target.id === "javascript") {
-    document.body.style.background = "yellow";
-  }
+//   // if (e.target.id === "javascript") {
+//   //   document.body.style.background = "yellow";
+//   //   document.body.style.color = "black"
 
-  // la j'ai juste 3 élements , en réalité on pourrait se récupérer ça dans un switch
+//   // }
+//   // if (e.target.id === "php") {
+//   //   document.body.style.background = "red";
+//   //   document.body.style.color = "white"
+//   // }
+//   // if (e.target.id === "python") {
+//   //   document.body.style.background = "blue";
+//   //   document.body.style.color = "pink"
+//   // }
 
-  switch (e.target.id) {
-    case "javascript":
-      document.body.style.background = "yellow";
-      break;
+//   // // la j'ai juste 3 élements , en réalité on pourrait se récupérer ça dans un switch
 
-    case "php":
-      document.body.style.background = "violet";
-      break;
+//   switch (e.target.id) {
+//     case "javascript":
+//       document.body.style.background = "yellow";
+//       break;
+
+//     case "php":
+//       document.body.style.background = "violet";
+//       break;
+//     case "python":
+//       document.body.style.background = "blue";
+//       break;
+//     default:
+//       null;
+//   }
+// // regarde mtn quand tu clique c terribleeeeee 
+//   // on comprend ces structures de contrôle en les pratiquant
+// });
+
+
+// révision 11-12-----------------------------------
+
+
+// je vais le refaire sans regarder , genre une fois normal et une fois avec le switch vu ue c'est ça le sujet du cours
+
+document.addEventListener('click', (e) => {
+
+ console.log(e.target.id);
+
+//  if(e.target.id === "javascript") {
+
+//        document.body.style.background = "red";
+
+//  }
+//  if(e.target.id === "php") {
+
+//   document.body.style.background = "blue";
+
+// }
+// if(e.target.id === "python") {
+
+//   document.body.style.background = "pink";
+
+// }
+
+// mtn si je met cela dans une switch
+
+
+switch(e.target.id) {
+  case "javascript":
+  document.body.style.background = "blue";
+  break
+
+  case "php":
+    document.body.style.background = "red";
+    break
+
     case "python":
-      document.body.style.background = "blue";
-      break;
+      document.body.style.background = "pink"
+      document.body.style.color = "white"
+      break
+
     default:
-      null;
-  }
-// regarde mtn quand tu clique c terribleeeeee 
-  // on comprend ces structures de contrôle en les pratiquant
-});
+      null
+// la je dis genre sinon ne fait rien
+  
+
+}
+ 
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 45min-
 
 

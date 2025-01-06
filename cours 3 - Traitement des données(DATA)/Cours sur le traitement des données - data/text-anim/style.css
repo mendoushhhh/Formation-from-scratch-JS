@@ -1,4 +1,4 @@
-/* étape 2 onf ait ça : (c'étais deja dans le  supprt de base masis tv t'entrainer tsb  */
+/* étape 2 onf ait ça : (c'étais deja dans le  supprt de base masis tv t'entrainer tsb 
 
 
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
@@ -35,4 +35,69 @@ body {
   100% {
     opacity: 1;
   }
+} */
+
+
+
+/* révision 11-12 ------------------------------- */
+
+
+/* étape2) je fais le css----------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* enfin voila c la hauteur de la fenêtre haha */
+  width: 100%;
+  overflow: hidden;
+}
+
+h3 {
+  letter-spacing: 2px;
+}
+
+
+#target {
+  display: flex;
+  margin-left: 1px;
+  position: relative;
+}
+
+#target:after {
+      content: "";
+      position: absolute;
+      height: 3rem;
+     background: black;
+     width: 5px;
+     top: 0;
+     transform: translateY(-2px);
+     animation: move  0.8s linear infinite ;
+
+}
+
+
+@keyframes move  {
+
+  /*  normalement 0%  c le début de l'aniamtion , et genre a 50% l'opaicty de l'after est de 0.2 ensuite a 100%  c a dire a la fin de l'animation l'opacité est de 1 donc complète*/
+
+
+  50% {
+    opacity: 0.2;
+    /* 50%  c a la moitié de l'animation  */
+    background: yellow;
+  }
+  100% {
+    opacity: 1;
+    /*  100%  c a la fin de l'animation  */
+    
+  }
+
 }
